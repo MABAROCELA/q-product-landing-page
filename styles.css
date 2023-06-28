@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Geologica", "Tajawal";
+    background-color: #f8f9fb;
+    letter-spacing: .0313rem;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 9.375rem auto 9.375rem;
+    grid-template-rows: 3.125rem 21.875rem auto auto auto auto auto auto 1.875rem;
+    grid-template-areas:
+        "header header header"
+        "navigation product aside"
+        "navigation section1 aside"
+        "navigation section2 aside"
+        "navigation section3 aside"
+        "navigation section4 aside"
+        "navigation section5 aside"
+        "navigation iframe form"
+        "navigation footer footer";
+        
+    grid-row-gap: .3125rem;
+    grid-column-gap: .3125rem;
+}
+
+h1 {
+    font-size: 3.125rem;
+    position: absolute;
+    top: 20%;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+h3 {
+    padding-bottom: 0.3125rem;
+}
+
+h5 {
+    font-size: .625rem;
+    font-weight: light;
+}
+
+section {
+    font-size: .75rem;
+    padding: .9375rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+}
+
+a:hover {
+    color: rgb(91, 183, 153);
+    background-color: #eff0f2;
+}
+
+p {
+    line-height: 1.2;
+}
+
+#header {
+    grid-area: header;
+    position: fixed;
+    height: 3.125rem;
+    width: 100%;
+    font-size: .75rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#logo {
+    height: 3.125rem;
+    z-index: 50;
+    justify-self: center;
+}
+
+#header-nav {
+    list-style-type: none;
+    padding-top: .3125rem;
+    padding-right: .625rem;
+}
+
+#nav-bar {
+    grid-area: navigation;
+    position: fixed;
+    width: 9.375rem;
+    height: 100vh;
+    padding-top: 4.375rem;
+    z-index: 1;
+    /*background-image: url(https://images.prismic.io/nina-ricci/60aa93b2-9f9c-4def-b5b2-d987cea2c138_IMG_0266.jpg?q=60&auto=compress,format&fit=max&width=640)*/
+    ;
+}
+
+.nav-list {
+    background-color: transparent;
+    padding-left: .625rem;
+}
+
+.nav-list li {
+    font-size: .9375rem;
+    padding: 1.25rem 0;
+    background-color: transparent;
+    list-style: none;
+}
+
+.nav-list li:first-of-type {
+    padding-top: 0;
+    background-color: transparent
+}
+
+#product {
+    display: grid;
+    grid-area: product;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        "productimg producttext";
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    padding-bottom: 9.375rem;
+}
+
+#productimg img {
+    max-height: 21.875rem;
+    width: auto;
+    grid-area: productimg;
+}
+
+#producttext p {
+    font-size: .75rem;
+    text-align: justify;
+    grid-area: producttext;
+    padding-right: 1.25rem;
+}
+
+#aside {
+    background-color: #f8f9fb;
+    grid-area: aside;
+    font-size: .75rem;
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: center;
+    justify-items: center;
+    grid-row-gap: .3125rem;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.other-product-img {
+    height: auto;
+    width: 9rem;
+    clip-path: square(50%);
+    object-fit: cover;
+}
+
+#section1 {
+    grid-area: section1;
+
+}
+
+#section2 {
+    grid-area: section2;
+}
+
+#section3 {
+    grid-area: section3;
+}
+
+#section4 {
+    grid-area: section4;
+}
+
+#section5 {
+    grid-area: section5;
+    line-height: 2;
+}
+
+#video1{
+    grid-area: iframe;
+    justify-self: center;
+    align-self: center;
+}
+
+#formulario{
+    grid-area: form;
+    font-size: .75rem;
+    display: flex;
+    
+}
+
+#form{
+    justify-content: center;
+    align-content: center;
+}
+
+#submit{
+    border:thin solid rgb(91, 183, 153) ;
+    background-color: rgb(91, 183, 153) ;
+    font-size: .75rem;
+    padding: .3125rem;
+}
+
+#footer {
+    grid-area: footer;
+    text-align: center;
+}
